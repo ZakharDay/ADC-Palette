@@ -1,0 +1,9 @@
+<div>
+  <%= link_to project do %>
+    <h2><%= project.name %></h2>
+  <% end %>
+
+  <div class="swatches">
+    <%= render project.swatches %>
+  </div>
+</div>

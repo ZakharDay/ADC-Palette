@@ -1,0 +1,27 @@
+<%= form_with(model: swatch) do |form| %>
+  <% if swatch.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(swatch.errors.count, "error") %> prohibited this swatch from being saved:</h2>
+
+      <ul>
+        <% swatch.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :project_id, style: "display: block" %>
+    <%= form.number_field :project_id %>
+  </div>
+
+  <div>
+    <%= form.label :place, style: "display: block" %>
+    <%= form.number_field :place %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
